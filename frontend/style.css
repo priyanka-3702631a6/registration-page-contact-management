@@ -1,0 +1,270 @@
+/* ---------- General Reset ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    margin: 0;
+    padding: 35px 20px;
+}
+
+/* ---------- Main Heading ---------- */
+
+h1 {
+    text-align: center;
+    color: #1e3a8a;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #1e293b;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+/* ---------- Registration Form ---------- */
+
+form {
+    max-width: 480px;
+    margin: 0 auto 35px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.08);
+}
+
+label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 7px;
+    color: #334155;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    background-color: #ffffff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+/* ---------- Buttons ---------- */
+
+button {
+    padding: 11px 16px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Registration form buttons */
+
+form button {
+    width: 100%;
+    margin-top: 22px;
+    font-size: 15px;
+}
+
+/* Cancel Edit button */
+
+#cancelEditButton {
+    background-color: #64748b;
+    margin-top: 10px;
+}
+
+#cancelEditButton:hover {
+    background-color: #475569;
+}
+
+#cancelEditButton[hidden] {
+    display: none;
+}
+
+/* ---------- Contacts Section ---------- */
+
+hr {
+    border: none;
+    border-top: 1px solid #dbe3ee;
+    margin: 35px 0;
+}
+
+#contactsTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+}
+
+#contactsTable th,
+#contactsTable td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+}
+
+#contactsTable th {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+#contactsTable tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+#contactsTable tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Action buttons inside the table */
+
+#contactsTable td button {
+    width: auto;
+    margin: 3px;
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+/* Edit button */
+
+#contactsTable td button:first-child {
+    background-color: #0f766e;
+}
+
+#contactsTable td button:first-child:hover {
+    background-color: #115e59;
+}
+
+/* Delete button */
+
+#contactsTable td button:last-child {
+    background-color: #dc2626;
+}
+
+#contactsTable td button:last-child:hover {
+    background-color: #b91c1c;
+}
+
+/* ---------- Search ---------- */
+
+#searchInput {
+    max-width: 420px;
+    margin-bottom: 20px;
+}
+
+/* Clear Search button */
+
+#clearSearchButton {
+    width: auto;
+    margin: 0 0 20px 10px;
+    background-color: #64748b;
+}
+
+#clearSearchButton:hover {
+    background-color: #475569;
+}
+
+/* ---------- Messages ---------- */
+
+#contactsMessage {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 18px;
+}
+
+
+/* Messages displayed above the registration form */
+#formMessage {
+    display: none;
+    padding: 12px 15px;
+    margin: 0 0 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Success message */
+#formMessage.success {
+    display: block;
+    color: #166534;
+    background-color: #dcfce7;
+    border: 1px solid #86efac;
+}
+
+/* Error message */
+#formMessage.error {
+    display: block;
+    color: #991b1b;
+    background-color: #fee2e2;
+    border: 1px solid #fca5a5;
+}
+
+/* ---------- Responsive Design ---------- */
+
+@media (max-width: 768px) {
+    body {
+        padding: 25px 12px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    form {
+        padding: 22px;
+    }
+
+    #contactsTable {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    #contactsTable th,
+    #contactsTable td {
+        padding: 11px 12px;
+    }
+
+    #searchInput {
+        max-width: 100%;
+    }
+
+    #clearSearchButton {
+        margin-left: 0;
+    }
+}
